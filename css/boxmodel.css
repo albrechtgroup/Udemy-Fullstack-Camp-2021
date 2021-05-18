@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+}
+
+div {
+	width: 200px;
+	height: 200px;
+	background-color: pink;
+}
+
+h1 {
+	width: 330px;
+	background-color: blue;
+	padding-left: 100px;
+	padding-top: 100px;
+}
+
+#one {
+	background-color: purple;
+	border-width: 5px;
+	border-color: yellow;
+	border-style: dashed;
+	margin-left: 50px;
+	margin-top: 30px;
+}
+
+#two {
+	background-color: blue;
+	border-color: #ffcdb2;
+	border-width: 3px;
+	border-style: solid;
+	border-left-color: magenta;
+	border-left-width: 7px;
+	border-radius: 50%;
+	padding-right: 50px;
+}
+/* -----*ShortHand------- */
+/* Border Shorthand= width/ style / color */
+/* Padding & Margin Shorthand = top | right | bottom | left */
+#three {
+	border: 7px dotted navy;
+	border-right-style: solid;
+	border-radius: 11%;
+	margin: 30px;
+}
