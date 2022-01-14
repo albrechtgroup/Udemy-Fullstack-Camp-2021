@@ -4,11 +4,11 @@ alert("Connected Girlfriend!");
 /// arguements
 /// ** 'person' is a parameter/ 'Mariya' is the arguement
 
-// function greet(person) {
-//     console.log(`Hi, ${person}!`);
-// }
+function greet(person) {
+    console.log(`Hi, ${person}!`);
+}
 
-// greet('Mariya'); ////"Hi, Mariya!"
+greet('Ava'); ////"Hi, Ava!"
 
 ////////////////////////////////////////////
 ///
@@ -16,11 +16,11 @@ alert("Connected Girlfriend!");
 ///////////////////////////////////////
 /// function Statement
 
-// function add(x, y){
-//     return x + y;
-// }
+function add(x, y){
+    return x + y;
+}
 
-// add(3,4); /// 7
+add(3,4); /// 7
 
 ////////////////////////////////////////
 /// function Expression
