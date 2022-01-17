@@ -67,12 +67,12 @@ const isEven2 = (num) => {
     return num % 2 === 0;
 }                   ///////// arrow function with Parems 
                     /// around the parameters.
-cosnt isEven3 = num => {
+const isEven3 = num => {
     return num % 2 === 0;
 }                   //// No parems arount the parameters.
-const isEven4 = num => (
-    return num % 2 === 0;
-);                  //// *Implicit Return. Replaces {},
+// const isEven4 = num => (
+//     return num % 2 === 0;
+// );                  //// *Implicit Return. Replaces {},
                     ///   with ().
 const isEven = num => num % 2 === 0; 
                     /// One-Liner Implicit Return. Without
