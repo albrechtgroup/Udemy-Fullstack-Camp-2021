@@ -1,9 +1,11 @@
 alert("Connected Girlfriend!");
 
 ////////////////////////////////////////
-/// arguements
-/// ** 'person' is a parameter/ 'Mariya' is the arguement
+/// Arguements
+/// ** 'person' is a parameter/ 'Ava' is the arguement
 
+
+//// String 'template literal'
 function greet(person) {
     console.log(`Hi, ${person}!`);
 }
@@ -11,7 +13,15 @@ function greet(person) {
 greet('Ava'); ////"Hi, Ava!"
 
 ////////////////////////////////////////////
-///
+/// 'Null' and 'Undefined'
+
+/// Null = Intentional abscense of any value
+///      = Must be assigned
+
+//// Undefined = Variables that do not have 
+///      a defined value are undefined
+
+
 
 ///////////////////////////////////////
 /// function Statement
