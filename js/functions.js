@@ -35,24 +35,99 @@ greet('Ava'); ////"Hi, Ava!"
 //// 'if', 'Else if' 'else' statements:
 /// 'if'
 let rating = 5;
+
 if (rating === 5) {
     console.log("You are a Superstar!")
 }
 
-//// 'if 
+//// 'else if'
+let stars = 4;
+
+if (stars === 4) {
+    console.log("You have received 4 STARS!!!")
+} else if (stars === 3) {
+    console.log("Not quite, you've only received 3 Stars.")
+}
+
+
+const dayOfWeek = "Friday";
+
+if (dayOfWeek === "Monday") {
+    console.log("Ugghhh!")
+} else if (dayOfWeek === "Friday") {
+    console.log("WooHoooo, T.G.I.F.!!!")
+}
+
+
+//// 'else'
+let rate = -99;
+
+if (rate === 3) {
+    console.log("You are a SuperStar!");
+} else if (rate === 2) {
+    console.log("Meets Expectations.");
+} else if (rate === 1) {
+    console.log("Needs Improvement");
+} else {
+    console.log("INVALID RATE.");
+}
+
+
 let random = Math.random();
 if (random < 0.5) {
     console.log("Less than 0.5")
-    console.log(random)
 } else {
     console.log("Greater than 0.5")
-    console.log(random)
+}
+console.log(random);
+
+
+////////////////////////////////////////
+//// Nesting Conditionals
+const password = prompt("Please enter your password.");
+
+// Password must be 6+ characters
+if (password.length >= 6) {
+    // Password cannot include spaces
+    if (password.indexOf(' ') === -1) {
+        console.log("You are Logged IN!");
+    } else {
+        console.log("Password cannot contain Spaces!")
+    }
+} else {
+    console.log("Password Too Short! Must be 6+ characters.")
+}
+
+///////////////////////////////////////
+//// Truthy or Falsy
+const userInput = prompt("Enter Something");
+
+if (userInput) {
+    console.log("TRUTHY")
+} else {
+    console.log("Falsy")
 }
 
 
 ////////////////////////////////////////
 //// Logical Operators:
+///  &&  and
+///  ||  or
+const age = 77;
+if (age < 5 || age >= 65) {
+    console.log("Admission: FREE!")
+} else if (age < 10) {
+    console("Admission: $10")
+} else if (age < 65) {
+    console.log("Admission: $20")
+} else {
+    console.log("Invalid AGE!")
+}
 
+/// !  not
+///  !false   //true
+///  !true    //false
+ 
 
 ///////////////////////////////////////
 /// function Statement
