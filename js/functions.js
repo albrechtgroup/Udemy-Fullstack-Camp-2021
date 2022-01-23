@@ -33,12 +33,14 @@ greet('Ava'); ////"Hi, Ava!"
 
 ////////////////////////////////////////
 //// 'if', 'Else if' 'else' statements:
+
 /// 'if'
 let rating = 5;
 
 if (rating === 5) {
     console.log("You are a Superstar!")
 }
+
 
 //// 'else if'
 let stars = 4;
@@ -48,7 +50,6 @@ if (stars === 4) {
 } else if (stars === 3) {
     console.log("Not quite, you've only received 3 Stars.")
 }
-
 
 const dayOfWeek = "Friday";
 
@@ -124,9 +125,9 @@ if (age < 5 || age >= 65) {
     console.log("Invalid AGE!")
 }
 
-/// !  not
-///  !false   //true
-///  !true    //false
+/// !  not:
+///  !false   // true
+///  !true    // false
  
 
 ///////////////////////////////////////
