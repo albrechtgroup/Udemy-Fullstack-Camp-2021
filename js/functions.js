@@ -128,7 +128,7 @@ if (age < 5 || age >= 65) {
 /// !  not:
 ///  !false   // true
 ///  !true    // false
- 
+
 
 ///////////////////////////////////////
 /// function Statement
