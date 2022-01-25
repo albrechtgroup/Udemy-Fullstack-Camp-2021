@@ -131,6 +131,46 @@ if (age < 5 || age >= 65) {
 
 
 ///////////////////////////////////////
+/// Function Object Literals:
+/// key: value pairs
+const fitBitData = {
+    totalSteps: 308727,
+    totalMiles: 173.34,
+    avgCalorieBurn: 3113,
+    workoutsThisWeek: '5 of 7',
+    aveGoodSleep: '7.13'
+};
+
+fitBitData.avgCalorieBurn // 3113
+
+/// Also object, just on one line
+const person = {firstName: 'Mick', lastName: 'Jagger'};
+
+/// Accessing data out of an Object:
+person.lastName // 'Jagger'
+/// [" "] If you're using something dynamic
+/// like a variable, use below:
+person["firstName"] // 'Mick'
+
+/// Changing/Updating values in Object
+person.firstName = 'Dick' 
+
+/// Adding key: value to and Object
+fitBitData.heartRate = 87;
+
+/// Nesting Arrays & Objects:
+const chickens = {
+    firstName: 'Ava',
+    lastName: 'Addams',
+    assets: ['T', 'A'],
+    exams: {
+        midterm: 92,
+        final: 97
+    }
+};
+
+
+///////////////////////////////////////
 /// function Statement
 function add(x, y){
     return x + y;
@@ -225,7 +265,7 @@ setTimeout(() => {
 
 /////////////////////////////////////////
 /// Arrow functions & 'this':
-const person = {
+const actor = {
     firstName: 'Viggo',
     lastName: 'Mortensen',
     fullName: function() {
