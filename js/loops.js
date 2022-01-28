@@ -42,6 +42,16 @@ for (let i = 0; i < seatingChart.length; i++) {
 }
 
 
+/////////////////////////////////////////
+/// 'for of' loops:
+/// 'for of' loop for seatingChart:
+for (let row of seatingChart) {
+    for (let student of row) {
+        console.log(student);
+    }
+}
+
+
 const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer', 'gunners'];
 
 /// 'for' loop for subreddits
@@ -72,7 +82,7 @@ while(count < 13) {
 
 const SECRET = "awa";
 
-let guess = prompt("Enter the sectret code.");
+let guess = prompt("Enter the secret code.");
 
 while(guess !== SECRET){
     guess = prompt("Enter the secret code.");
@@ -81,5 +91,4 @@ while(guess !== SECRET){
 console.log("CONGRATS, You have guessed the Secret!!!");
 
 
-
-
+/// Iterating over objects:
