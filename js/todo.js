@@ -1,3 +1,10 @@
+/// ToDo List:
+/// Starts with a prompt, then select action
+/// "new" - Add a Todo
+/// "list" - List all Todo's
+/// "delete" - Remove Specific Todo
+/// "quit" - Quit App
+
 let input = prompt("What would you like to do?");
 const todos = ['Bike 13k'];
 
