@@ -1,4 +1,5 @@
-alert("Connected Girlfriend!");
+// alert("Connected Girlfriend!");
+
 ////////////////////////////////////////
 /// 'Null' and 'Undefined':
 
@@ -172,7 +173,7 @@ singSong();
 /// Arguements:
 /// 'person' is a parameter/ 
 /// 'Ava' is the arguement
-//// String 'template literal'
+//// String `template literal`
 function greet(person) {
     console.log(`Hi, ${person}!`);
 }
