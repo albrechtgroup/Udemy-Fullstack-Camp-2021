@@ -1,16 +1,4 @@
 alert("Connected Girlfriend!");
-
-////////////////////////////////////////
-/// Arguements:
-/// ** 'person' is a parameter/ 'Ava' is the arguement
-//// String 'template literal'
-function greet(person) {
-    console.log(`Hi, ${person}!`);
-}
-
-greet('Ava'); ////"Hi, Ava!"
-
-
 ////////////////////////////////////////
 /// 'Null' and 'Undefined':
 
@@ -32,7 +20,7 @@ greet('Ava'); ////"Hi, Ava!"
 //  ===, !== *Always use Tripe equal* 
 
 ////////////////////////////////////////
-//// 'if', 'Else if' 'else' statements:
+//// 'if', 'else if' 'else' statements:
 
 /// 'if'
 let rating = 5;
@@ -170,8 +158,53 @@ const chickens = {
 };
 
 
+//////////////////////////////////////
+/// Simple first function:
+/// Defining function 'singSong'
+function singSong() {
+    console.log("Hell yeah man!!")
+}
+/// run/execute the function
+singSong();
+
+
+////////////////////////////////////////
+/// Arguements:
+/// 'person' is a parameter/ 
+/// 'Ava' is the arguement
+//// String 'template literal'
+function greet(person) {
+    console.log(`Hi, ${person}!`);
+}
+
+greet('Ava'); /// "Hi, Ava!"
+greet('Mandy'); /// "Hi, Mandy!"
+
+/// Multiple arguements:
+function fullName(firstName, lastName) {
+    console.log(`Hi, my name is ${firstName} ${lastName}.`);
+}
+
+fullName('Ava', 'Adams');
+fullName('Lonely', 'Island');
+
+
+/// function that repeats the parameter,
+/// a number of times.
+function repeat(str, numTimes) {
+    let result = '';
+    for (let i = 0; i < numTimes; i++) {
+        result += str;
+    }
+    console.log(result);
+}
+
+repeat('Sup dude, ', 7);
+
+
 ///////////////////////////////////////
 /// function Statement
+/// the 'return' keyword:
 function add(x, y){
     return x + y;
 }
@@ -179,7 +212,12 @@ function add(x, y){
 add(3,4); /// 7
 
 
-////////////////////////////////////////
+///////////////////////////////////////
+/// Function Scope:
+
+
+
+///////////////////////////////////////
 /// function Expression
 const add2 = function(x, y) {
     return x + y;
@@ -193,17 +231,17 @@ add2(3,4); /// 7
 /// * Accept other functions as Arguements
 /// roll die function
 
-// function callTwice(func) {
-//     func();
-//     func();
-// }
+function callTwice(func) {
+    func();
+    func();
+}
 
-// function rollDie() {
-//     const roll = Math.floor(Math.random() * 6) + 1
-//     console.log(roll)
-// }
+function rollDie() {
+    const roll = Math.floor(Math.random() * 6) + 1
+    console.log(roll)
+}
 
-// callTwice(rollDie);
+callTwice(rollDie);
 
 
 ////////////////////////////////////////
