@@ -104,6 +104,7 @@
 // }
 
 //////////////////////////////////////////////////////
+/// Exercise
 
 // function rant(message) {
 //     console.log(message.toUpperCase());
@@ -195,22 +196,22 @@ const greet = (n) => {
 
 
 
-//////////////////////////////////
+// //////////////////////////////////
 
-alert("Document Object Model Son!...");
+// alert("Document Object Model Son!...");
 
-//////   Pickles Exercise:
-document.querySelector('span');
-document.querySelector('span').innerText = 'Disgusting';
+// //////   Pickles Exercise:
+// document.querySelector('span');
+// // document.querySelector('span').innerText() = 'Disgusting';
 
-///////  Manipulating Attributes Exercise:
-document.querySelector('img').src = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg';
-document.querySelector('img').alt = "chicken";
+// ///////  Manipulating Attributes Exercise:
+// document.querySelector('img').src = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg';
+// document.querySelector('img').alt = "chicken";
 
-//////   Magical Forest Circle Exercise:
-const container = document.querySelector('div');
-const image = document.querySelector('img');
+// //////   Magical Forest Circle Exercise:
+// const container = document.querySelector('div');
+// const image = document.querySelector('img');
 
-container.style.textAlign = 'center';
-image.style.width = '150px';
-image.style.borderRadius = '50%';
+// container.style.textAlign = 'center';
+// image.style.width = '150px';
+// image.style.borderRadius = '50%';
