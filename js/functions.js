@@ -215,6 +215,12 @@ add(3,4); /// 7
 
 ///////////////////////////////////////
 /// Function Scope:
+let bird = 'Scarlet Macaw';
+function birdWatch() {
+    let bird = 'Great Blue Heron';
+}
+
+console.log(bird); /// 'Scarlet Macaw'
 
 
 
