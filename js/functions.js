@@ -215,6 +215,16 @@ add(3,4); /// 7
 
 ///////////////////////////////////////
 /// Function Scope:
+let totalEggs = 0;
+function collectEggs() {
+    totalEggs = 7;
+}
+console.log(totalEggs); /// 0
+collectEggs();          /// Executing func.
+console.log(totalEggs); /// 7 
+
+
+/// 'Scarlet Macaw' is a Global variable
 let bird = 'Scarlet Macaw';
 function birdWatch() {
     let bird = 'Great Blue Heron';
