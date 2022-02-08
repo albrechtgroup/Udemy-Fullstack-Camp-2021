@@ -233,9 +233,49 @@ function birdWatch() {
 console.log(bird); /// 'Scarlet Macaw'
 
 
+let brd = 'Mandarin Duck';
+function brdWatch(){
+    let brd = 'Golden Pheasant';
+    brd; // 'Golden Pheasant'
+    /// brd is scoped to brdwatch function
+}
+
+bird; // 'Mandarin Duck'
+
+
+/// Block Scope:
+/// Common with conditionals and loops
+/// blocked within { }
+let radius = 7;
+if (radius > 0) {
+    const PI = 3.14159;
+    let msg = 'Hiii!';
+}
+
+console.log(radius); // 7
+//  console.log(msg); // Uncaught referece not defined 
+// const PI and let msg are scope in the 
+// conditional block..
+
+
+/// Lexical Scope:
+/// inner has lexical scope to its parent outer
+function outer() {
+    let hero = "Superman";
+
+    function inner() {
+        let cryForHelp = `${hero}, please save me!`
+        console.log(cryForHelp); 
+    }
+
+    inner();
+}
+
 
 ///////////////////////////////////////
-/// function Expression
+/// function Expression:
+/// In these we are defining a function to
+/// a variable.
 const add2 = function(x, y) {
     return x + y;
 }
@@ -243,11 +283,18 @@ const add2 = function(x, y) {
 add2(3,4); /// 7
 
 
+const square = function (num) {
+    return num * num;
+}
+square(7); // 49
+
+
 ///////////////////////////////////////
 /// Higher Order functions
-/// * Accept other functions as Arguements
-/// roll die function
+/// *Accept other functions as Arguements
+/// Return a function
 
+/// roll die function
 function callTwice(func) {
     func();
     func();
@@ -283,24 +330,35 @@ function makeMysteryFunc() {
 }
 
 const mystery = makeMysteryFunc();
+mystery();
 
 
 ////////////////////////////////////////
 /// defining Methods:
+/// Add functions as properties in object.
+const myMath = {
+    PI: 3.14159,
+    square: function (num) {
+        return num * num;
+    }, 
+    cube: function (num) {
+        return num ** 3;
+    },
+    add: function (num) {
+        return num + num;
+    }
+}
 
-// const myMath = {
-//     PI: 3.14159,
-//     square: function (num) {
-//         return num * num;
-//     }, 
-//     cube: function (num) {
-//         return num ** 3;
-//     }
-// }
+
+/// Every method is a function; but not every
+/// function is a method*
 
 
 ////////////////////////////////////////
 /// keyword 'this'
+/// Use the keyword 'this' to access properties
+/// on the same object.
+
 const cat = {
     name: 'Chloe',
     color: 'Calico',
@@ -311,11 +369,35 @@ const cat = {
 }
 
 
+const identity = {
+    first: 'Andy',
+    last: 'Albrecht',
+    fullName() {
+        return `${this.first} ${this.last}`
+    }
+}
+identity.fullName(); // Andy Albrecht
+identity.last = "Milano";
+identity.fullName(); // Andy Milano
+
+/// The value of 'this' depends on how we 
+/// actually call the function*
+
+
+////////////////////////////////////////
+/// Try/Catch:
+try {
+    hello.toUppercase();
+} catch {
+    console.log("ERROR!!!!");
+}
+
+
 /////////////////////////////////////////
 /// setTimeout & setInterval
-setTimeout(() => {
-    alert("setTimeout, 2 seconds");
-}, 2000)
+// setTimeout(() => {
+//     alert("setTimeout, 2 seconds");
+// }, 2000)
 
 
 /////////////////////////////////////////
