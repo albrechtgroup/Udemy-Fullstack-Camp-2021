@@ -184,6 +184,10 @@ const cleanNames = names.map(function (n) {
 
 });
 
+const firstNames = fullNames.map( function(n) {
+    return n.first;
+});
+
 /////////////////////////////////////
 /// Arrow Functions
 const greet = (n) => {
