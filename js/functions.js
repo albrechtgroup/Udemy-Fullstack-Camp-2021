@@ -391,21 +391,3 @@ try {
 } catch {
     console.log("ERROR!!!!");
 }
-
-
-/////////////////////////////////////////
-/// setTimeout & setInterval
-// setTimeout(() => {
-//     alert("setTimeout, 2 seconds");
-// }, 2000)
-
-
-/////////////////////////////////////////
-/// Arrow functions & 'this':
-const actor = {
-    firstName: 'Viggo',
-    lastName: 'Mortensen',
-    fullName: function() {
-        return `${this.firstName} ${this.lastName}`
-    }
-}
