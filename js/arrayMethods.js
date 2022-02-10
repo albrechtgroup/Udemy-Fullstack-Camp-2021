@@ -13,7 +13,8 @@ let classmates = ['Jeremy', 'Rob', 'Jason']
 
 classmates.shift('Jeremy'); // removes from
                             // beggining
-
+                            
+                            
 /////////////////////////////////////////
 //// More Methods:
 /// join - creates a string from an array
@@ -68,17 +69,22 @@ colors[2][1]; // 'gold'
 colors[0][1]; // 'crimson'
 
 
+////////////////////////////////////////
 ///// 'forEach' Method
 const nums = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 
 nums.forEach(function (n) {
     console.log(n * n);
+    // 81, 64, 49, 36, 25, 16, 9, 4, 1
 });
-/// 'for of'  reminder
+
+
+/// 'for of' reminder
 for (let num of nums) {
     console.log(num);
 }
-/////
+
+
 const movies = [
     {
         title: 'Amadeus',
@@ -98,21 +104,43 @@ const movies = [
     }
 ]
 
+/// 'forEach' on movies array:
 movies.forEach(function (movie) {
     console.log(movie);
 });
+
+
 ///////////////////////////////////////
-/// map Method
+/// map Method:
+/// Creates a new array with the results of
+/// calling a callback on every element in 
+/// the array.
 const texts = ['rofl', 'lol', 'omg', 'ttyl'];
 const caps = texts.map( function (t) {
     return t.toUpperCase();
 });
-////
+texts; // ["rofl", "lol", "omg", "ttyl"]
+caps; // ["ROFL", "LOL", "OMG", "TTYL"]
 
-/////////////////////////////////////
-/// Arrow Functions
-const square = (x) => {
-    return x * x;
+
+const digits = [1, 2, 3, 4];
+const doubleDigits = digits.map(function(num) {
+    return num * 2;
+})
+doubleDigits; // [2, 4, 6, 8]
+
+
+/// .map on movies array above
+const movieRating = movies.map(function(movie) {
+    return `${movie.title} - ${movie.score / 10}`;
+});
+movieRating; //
+
+
+////////////////////////////////////////
+/// Arrow Functions:
+const square = (num) => {
+    return num * num;
 }
 
 const add = (x, y) => {
@@ -123,57 +151,151 @@ const sum = (x, y) => {
     return x + y;
 }
 
+/// Can get rid of parenthesis when there is 
+/// only one arguement:
+const sqr = x => {
+    return x * x;
+}
+
+/// arrow function with No arguements:
 const rollDie = () => {
     return Math.floor(Math.random() * 6) + 1
 }
 
+
 /////////////////////////////////////////////
 /// Arrow Function Implicit Returns:
-/// ** CAN ONLY DO WITH ARROW FUNCTIONS! **
+/// *CAN ONLY DO WITH ARROW FUNCTIONS! **
+/// *All of the functions below do the 
+/// same thing.
+
+/// Regular function expression:
 const isEven = function (num) {
     return num % 2 === 0;
-}                  ////////// Regular function expression
+}       
+/// Arrow function with parenthesis
+/// around the parameters.
 const isEven2 = (num) => {
     return num % 2 === 0;
-}                   ///////// arrow function with Parems 
-                    /// around the parameters.
+}            
+//// No parenthesis around the parameters.       
 const isEven3 = num => {
     return num % 2 === 0;
-}                   //// No parems arount the parameters.
-// const isEven4 = num => (
-//     return num % 2 === 0;
-// );                  //// *Implicit Return. Replaces {},
-                    ///   with ().
-//  const isEven = num => num % 2 === 0; 
-                    /// One-Liner Implicit Return. Without
-                    /// ().
+} 
+/// *Implicit Return. Replaces {},
+/// with (). *ALSO, no longer use 'return'              
+const isEven4 = num => (
+    num % 2 === 0
+);                
+/// One-Liner Implicit Return. Without
+/// (). *ALSO, no longer use 'return'
+const isEven5 = num => num % 2 === 0; 
 
+/// Shorthand add 
+const addAgain = (a, b) => a + b;
+                   
 
-//////////////////////////////////////////////////////
-
-const newMovies = movies.map(function(movie) {
-    return `${movie.title} - ${movie.score / 10}`
+/// .map movies arrray w/ Arrrow functions:
+const newMovies = movies.map((movie) => {
+    return `${movie.title} - ${movie.score / 10}`    
 });
 
-//// With Arrrow functions:
-// const newMovies = movies.map((movie) => {
-//     return `${movie.title} - ${movie.score / 10}`    
-// });
+/// .map movies w/ Implicit returns: Shorter
+const newFlix = movies.map(movie => (
+    `${movie.title} - ${movie.score / 10}`
+));
 
-//// With Implicit returns:
-// const newMovies = movies.map(movie => (
-//     `${movie.title} - ${movie.score / 10}`
-// ));
+
+/////////////////////////////////////////
+/// setTimeout & setInterval
+setTimeout(() => {
+    alert("setTimeout, 2 seconds");
+}, 2000)
+
 
 /////////////////////////////////////////////////////
-/// filter 
+/// .filter method:
+/// Creates a New array w/ all elements that
+/// pass the test implemented by the provided
+/// function.
 const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 const odds = numbers.filter(n => {
     return n % 2 === 1;
 })
-
+/// Our callback returns true or false, if 
+/// true, 'n' is added to filtered array.
 const smallNums = numbers.filter(n => n < 5); /// [4, 3, 2, 1]
 
+/// .filter method on movies array above.
 const goodMovies = movies.filter(movie => {
     return movie.score > 80;
 })
+/// Implicit shorthand
+const goodMovies2 = movies.filter(m =>  m.score > 80);
+const recentMovies = movies.filter(m => m.year > 1990);
+
+/// Combine .map and .filter:
+const goodTitles = goodMovies.map(m => m.title)
+
+
+/////////////////////////////////////////
+/// 'Some' and 'Every':
+/// *Always return True or False (Boolean)
+
+/// .some
+const words = ['dog', 'jello', 'log', 'cupcake', 'bag', 'wag'];
+/// Are there any words longer than 4 characters?
+words.some(word => {
+    return word.length >4;
+}) // true
+
+/// Do any words start with 'Z'?
+words.some(word => word[0] === 'Z');
+// false
+
+/// Do any words contain 'cake'?
+words.some(w => w.includes('cake')) 
+// true
+
+/// .every
+words.every(word => {
+    return word.length === 3;
+}) // true
+
+words.every(word => word[0] === 'd');
+   // false
+
+
+////////////////////////////////////////
+/// Reduce method:
+/// Executes a reducer function on each 
+/// element of the array, resulting in 
+/// a single value.
+[3, 5, 7, 9, 11].reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+});
+
+
+const prices = [9.99, 1.5, 19.99, 49.99, 30.50];
+const total = prices.reduce((total, price) => {
+    return total + price;
+}); // 111.97
+
+
+/////////////////////////////////////////
+/// Arrow functions & 'this':
+/// 'this' refers to the window object
+/// *(Where it was made, Not execution)
+
+/// WithOut Arrow func.
+/// 'this' refers to how the func is Exucuted
+const actor = {
+    firstName: 'Viggo',
+    lastName: 'Mortensen',
+    fullName: function() {
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+
+
