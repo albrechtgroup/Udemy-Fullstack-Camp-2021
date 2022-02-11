@@ -75,28 +75,41 @@ const dataFromUser = {
     username: "tFunk"
 }
 
-const newUser = {...dataFromUser, id: 6933, isAdmin: false}
+const newUser = {...dataFromUser, id: 6933, isAdmin: false};
 
 
 /// Rest Parameters:
+/// Collects all remaining arguements into
+/// an actual array.
 function raceResultsf(gold, silver, ...everyoneElse) {
     console.log(`GOLD Medal goes to: ${gold}`)
     console.log(`SILVER Medal goes to: ${silver}`)
     console.log(`And Thank You to everyone else: ${everyoneElse}`)
 }
+raceResultsf("AvA", "Brandi", "Lauren", "Skyler");
 
 
-/// Destructuring Arrays:
+/// Destructuring Arrays[]:
+/// A short, clean syntax to 'unpack' values
+/// from arrays & properties in objects into
+/// distinct variables.
 const scores = [979337, 936859, 881796, 873958, 763980, 693771];
 
-const winner = scores[0];
-const runnerUp = scores[1];
+const winner = scores[0]; // 979337
+const runnerUp = scores[1]; // 936859
 
+/// Or, shorter way than above:
 const [gold, silver, bronze, ...everyoneElse] = scores;
 /// creats new Variable of position 0,1 & 2 of the Array
+scores; //
+
+gold; // 979337
+silver; // 936859
+bronze; // 881796
 
 
-/// Destructuring Objects:
+/// Destructuring Objects{}:
+/// *More common than arrays.
 const user = {
     username: 'Hancock373',
     email: 'aalbrecht33733@gmail.com',
@@ -107,7 +120,19 @@ const user = {
 }
 
 const {username, born, state} = user;
-/// creats new Variable of position 0,1 & 2 of Object.
+/// creats new Variables of position 0,1 & 2 of Object.
 
 
 /// Destructuring Params:
+/// *Most common in objects.
+const fullName = ({first, last}) => {
+    return `${first} ${last}`
+}
+
+const football = {
+    first: "Tom",
+    last: "Brady",
+    country: "U.S.A."
+}
+
+fullName(football); // "Tom Brady"
