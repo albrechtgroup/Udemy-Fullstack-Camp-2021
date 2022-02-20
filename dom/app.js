@@ -41,6 +41,9 @@ document.querySelector('a[title="java"]');
 document.querySelectorAll('p');
 
 
+/// MDN Docs - document.createElement():
+/// var element = document.createElement(tagName[, options]);
+
 
 //////////////////////////////////////////
 /// POKEMON Html display thing:
