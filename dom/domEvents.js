@@ -6,7 +6,9 @@ btn.onclick = function() {
 }
 
 
-//// addEventListener *
+//// *addEventListener (*Best Option)
+/// Specify the event type, and a callback
+/// to run. (Most Commonly seen)
 const h1 = document.querySelector('h1');
 
 h1.addEventListener('click', () => {
@@ -14,7 +16,20 @@ h1.addEventListener('click', () => {
 })
 
 
-////  Keyboard Events & Event Objects
+function twist() {
+    console.log("Twist");
+}
+function shout() {
+    console.log("Shout");
+}
+
+const tasButton = document.querySelector('#tas');
+
+tasButton.addEventListener('click', twist);
+tasButton.addEventListener('click', shout);
+
+
+//// Keyboard Events & Event Objects
 document.querySelector('button').addEventListener('click', function(evt) {
     console.log(evt);
 })
