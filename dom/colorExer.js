@@ -7,10 +7,13 @@ button.addEventListener('click', function() {
     h1.innerText = newColor;
 })
 
+/// Generates a random color for each:
+/// Using 256 istead of 255 because we floor
+/// the number.
 const randomColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`
 }
 
