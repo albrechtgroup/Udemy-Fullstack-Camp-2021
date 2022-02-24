@@ -29,11 +29,13 @@ tasButton.addEventListener('click', twist);
 tasButton.addEventListener('click', shout);
 
 
-//// Keyboard Events & Event Objects
+//// Keyboard Events & Event Objects:
 document.querySelector('button').addEventListener('click', function(evt) {
     console.log(evt);
 })
 
+
+/// 'keydown'/'keyup keyboard events:
 const input = document.querySelector('input');
 input.addEventListener('keydown', function() {
     console.log("Key Down!")
@@ -44,7 +46,8 @@ input.addEventListener('keyup', function(evt) {
 })
 
 
-////
+/// 'keydown' keyboard event:
+/// console.log()s the evt .key and .code
 window.addEventListener('keydown', function(evt) {
     console.log(evt.key)
     console.log(evt.code)

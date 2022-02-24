@@ -1,4 +1,4 @@
-const button = document.querySelector('button');
+const button = document.querySelector('#main');
 const h1 = document.querySelector('h1');
 
 button.addEventListener('click', function() {
@@ -16,4 +16,3 @@ const randomColor = () => {
     const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`
 }
-
