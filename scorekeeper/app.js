@@ -56,6 +56,8 @@ winningScoreSelect.addEventListener('change', function() {
     reset();
 })
 
+
+/// reset button updates/clears logic.
 resetButton.addEventListener('click', reset)
 
 function reset() {
