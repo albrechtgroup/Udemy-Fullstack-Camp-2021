@@ -1,24 +1,34 @@
-////////////////////////////////////
-//// Callstack
+/// Asynchronous JS = Not all functions 
+/// happening at the same time. 
+
+/// The Call Stack:
+/// How JS "knows" what function is currently
+/// being run and what functions are called
+/// from Within that function, etc.
+/// A 'stack' is L.I.F.O = Last In First Out
+
+/// 'isRightTriangle' calls 'square', square
+/// calls the 'multiply' function.. etc.
 const multiply = (x, y) => x * y;
 
 const square = x => multiply(x, x);
 
 const isRightTriangle = (a, b, c) => (
-    square(a) + square(b) + square(c)
+    square(a) + square(b) === square(c)
 )
 
-////////////////////////////////////
+
+/// Callbacks:
+/// Browsers come with Web API's*
 console.log('I print 1st');
-
 setTimeout(() => {
-    console.log('I print after 3 seconds');
+    console.log('I print after 3 seconds, and turn RED after 7!!!');
+    document.body.style.backgroundColor = 'red';
 }, 3000);
+console.log('I print 2nd, but listed 3rd..');
 
-console.log('I print 2nd');
 
-/////////////////////////////////////
-//// fake request: Callbacks
+/// DEMO: fakeRequest using Callbacks:
 const fakeRequestCallback = (url, success, failure) => {
     const delay = Math.floor(Math.random() * 4500) + 500;
     setTimeout(() => {
@@ -38,12 +48,17 @@ fakeRequestCallback('books.com',
         console.log("ERROR!!!", err)
     })
 
+/// Callbacks are a frustrating experience so,
+/// the Promise is Much better/Newer:
+/// 'Promise'- Is an object representing the
+/// eventual completion or failure of an 
+/// Asynchronous operation.
 
-///////////////////////////////////////
-//// fake request: Promises
+/// DEMO: fakeRequest using Promises:
 const fakeRequestPromise = (url) => {
     return new Promise((resolve, reject) => {
         const delay = Math.floor(Math.random() * (4500)) + 500;
+
         setTimeout(() => {
             if(delay > 4000) {
                 reject('Connection Timeout :(')
@@ -54,7 +69,7 @@ const fakeRequestPromise = (url) => {
     })
 }
 
-/////////////////////////////////////////
+
 ///// Magic of Promises: refigure
 fakeRequestPromise('yelp.com/api/coffee/page1')
     .then(() => {
@@ -72,8 +87,8 @@ fakeRequestPromise('yelp.com/api/coffee/page1')
         console.log("OH NO, A Request Failed!!!")
     })
 
-////////////////////////////////////////////
-///// Make out Own Promise:
+
+/// Creating our own Promises:
 const fakeRequest = (url) => {
     new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -82,5 +97,12 @@ const fakeRequest = (url) => {
     })
 }  
 
-////////////////////////////////////////////
-///// ASYNC Functions:
+
+/// The 'Async' keyword:
+
+
+/// The 'Await' keyword:
+
+
+/// Handling errors in Async functions:
+
