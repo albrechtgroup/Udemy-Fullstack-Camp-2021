@@ -70,6 +70,12 @@ loadStarWarsPeople();
 /// AXIOS - A librairy for making HTTP 
 /// Requests and better than .fetch
 
-// const axios = require('axios');
+const axios = require('axios');
 
-// axios.get('https://swapi.dev/api/people/3/')
+axios.get('https://swapi.dev/api/people/3/')
+    .then((res) => {
+        console.log("AXIOS Response", res)
+    })
+    .catch((e) => {
+        console.log("ERROR", e)
+    })
