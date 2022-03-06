@@ -1,15 +1,3 @@
-///////////  Current Bitcoin price request
-
-// axios.get('https://api.cryptonator.com/api/ticker/btc-usd')
-//     .then(res => {
-//         console.log("Current Bitcoin Price:")
-//         console.log(`=>`, res.data.ticker.price)
-//     })
-//     .catch(err => {
-//         console.log("ERROR!!!", err)
-//     })
-
-//////////////////////////////////
 const form = document.querySelector('#searchForm');
 form.addEventListener('submit', async function (e) {
     e.preventDefault();
