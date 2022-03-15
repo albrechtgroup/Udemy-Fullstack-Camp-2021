@@ -10,5 +10,7 @@ jokes.getRandomDadJoke (function(joke) {
 var category = "blonde";
 
 jokes.getRandomJokeOfTheDay (category, function(joke) {
-    console.log(joke.rainbow);
+    console.log(joke);
+    // console.log(joke.rainbow);
+    // console.log(joke.blue);
 });
