@@ -13,3 +13,8 @@ figlet('NodeJS SON*', function (err, data) {
     }
     console.log(data.rainbow)
 })
+
+
+/// 'npm install' to download npm packages to 
+/// new machine after copy/cloning.
+/// *Inside the Root file you are using.
