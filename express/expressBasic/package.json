@@ -1,0 +1,14 @@
+{
+  "name": "expressbasic",
+  "version": "1.0.0",
+  "description": "Basic Express Ap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Albrecht",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
