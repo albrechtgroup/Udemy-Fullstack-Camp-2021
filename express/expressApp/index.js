@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
+/// express.static() is what's called 
+/// 'middleware'- Executes every request
+/// Runs between the request coming in, and
+/// the response going out.
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use(express.urlencoded({ extended: true }));
