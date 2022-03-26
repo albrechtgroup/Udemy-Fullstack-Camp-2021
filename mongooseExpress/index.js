@@ -62,6 +62,7 @@ app.delete('/products/:id', async (req, res) => {
     res.redirect('/products');
 })
 
+
 app.listen(3000, () => {
     console.log("================================")
     console.log("App is LIVE on Port 3000*")
