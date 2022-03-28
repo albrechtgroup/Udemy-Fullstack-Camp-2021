@@ -1,3 +1,5 @@
+/// Farm Stand Project. Using Mongoose for 
+/// our MongoDb server.
 const express = require('express'); 
 const app = express();
 const path = require('path');
@@ -6,7 +8,8 @@ const methodOverride = require('method-override')
 
 const Product = require('./models/product');
 
-mongoose.connect('mongodb://localhost:27017/farmStand', { useNewUrlParser: true })
+/// O.D.M. = Object Document Mapper(Mongoose)
+mongoose.connect('mongodb://localhost:27017/farmStand', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("======================================")
         console.log("MONGO Connction OPEN!!")
