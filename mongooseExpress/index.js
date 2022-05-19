@@ -70,3 +70,31 @@ app.listen(3000, () => {
     console.log("================================")
     console.log("App is LIVE on Port 3000*")
 })
+
+
+/// Example of new mongoose Schema:
+
+// var catSchema = new mongoose.Schema({
+//     name: String,
+//     age: Number,
+//     temperament: String
+// });
+
+// const Cat = mongoose.model("Cat", catSchema);
+
+
+// // adding a new cat to the DB
+// var george = new Cat({
+//     name: "George",
+//     age: 11,
+//     temperament: "Playful"
+// });
+
+// george.save((err, cat) => {
+//     if(err) {
+//         console.log("Something Went Wrong!!!")
+//     } else {
+//         console.log("We Just Saved a New Cat to the DB:")
+//         console.log(cat);
+//     }
+// });
