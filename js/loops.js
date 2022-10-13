@@ -1,15 +1,21 @@
-//////////////////////////////////////////
-/// 'for' loop
+// 'for' loop
+// Prints 1-10, each on a new line*
 for (let i = 1; i <= 10; i++) {
     console.log(i);
 }
 
+// Prints 100-0 in increments of 10, each on a new line*
 for (let i = 100; i >= 0; i -= 10) {
     console.log(i);
 }   /// 100, 90, 80, 70, etc.
 
+// Prints 0-100 in increments of 5, each on a new line*
+for (let i = 0; i <= 100; i += 5) {
+    console.log(i)
+}
+// 0
 
-/// 'for' looping(Iterating) over arrays:
+// 'for' looping(Iterating) over arrays:
 const animals = ['lions', 'tigers', 'bears'];
 
 for (let i = 0; i < animals.length; i++) {
@@ -20,7 +26,7 @@ for (let i = 0; i < animals.length; i++) {
 // 2 'bears'
 
 
-/// Nested 'for' Loops:
+// Nested 'for' Loops:
 for (let i = 1; i <= 10; i++) {
     console.log(`i is: ${i}`)
     for (let j = 1; j < 4; j++) {
@@ -42,9 +48,8 @@ for (let i = 0; i < seatingChart.length; i++) {
 }
 
 
-/////////////////////////////////////////
-/// 'for of' loops:
-/// 'for of' loop for seatingChart:
+// 'for of' loops:
+// 'for of' loop for seatingChart:
 for (let row of seatingChart) {
     for (let student of row) {
         console.log(student);
@@ -54,19 +59,17 @@ for (let row of seatingChart) {
 
 const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer', 'gunners'];
 
-/// 'for' loop for subreddits
+// 'for' loop for subreddits
 for(let i = 0; i < subreddits.length; i++){
     console.log(`Visit reddit.com/r/${subreddits[i]}`);
 }
 
-/// 'for of' loop for subreddits
+// 'for of' loop for subreddits
 for(let sub of subreddits) {
     console.log(sub);
 }
 
-
-/////////////////////////////////////////
-/// 'while' loop:
+// 'while' loop:
 let number = 0;
 while (number < 10) {
     console.log(number);
@@ -91,4 +94,4 @@ while(guess !== SECRET){
 console.log("CONGRATS, You have guessed the Secret!!!");
 
 
-/// Iterating over objects:
+// Iterating over objects:
