@@ -4,7 +4,7 @@ for (let i = 1; i <= 10; i++) {
     console.log(i);
 }
 
-// Prints 100-0 in increments of 10, each on a new line*
+// Prints 100-0 in decrements of 10, each on a new line*
 for (let i = 100; i >= 0; i -= 10) {
     console.log(i);
 }   /// 100, 90, 80, 70, etc.
@@ -13,7 +13,6 @@ for (let i = 100; i >= 0; i -= 10) {
 for (let i = 0; i <= 100; i += 5) {
     console.log(i)
 }
-// 0
 
 // 'for' looping(Iterating) over arrays:
 const animals = ['lions', 'tigers', 'bears'];
@@ -24,7 +23,6 @@ for (let i = 0; i < animals.length; i++) {
 // 0 'lions'
 // 1 'tigers'
 // 2 'bears'
-
 
 // Nested 'for' Loops:
 for (let i = 1; i <= 10; i++) {
@@ -47,7 +45,6 @@ for (let i = 0; i < seatingChart.length; i++) {
     }
 }
 
-
 // 'for of' loops:
 // 'for of' loop for seatingChart:
 for (let row of seatingChart) {
@@ -55,7 +52,6 @@ for (let row of seatingChart) {
         console.log(student);
     }
 }
-
 
 const subreddits = ['cringe', 'books', 'chickens', 'funny', 'pics', 'soccer', 'gunners'];
 
@@ -82,7 +78,6 @@ while(count < 13) {
     console.log(count)
 }
 
-
 const SECRET = "awa";
 
 let guess = prompt("Enter the secret code.");
@@ -92,6 +87,5 @@ while(guess !== SECRET){
 }
 
 console.log("CONGRATS, You have guessed the Secret!!!");
-
 
 // Iterating over objects:
