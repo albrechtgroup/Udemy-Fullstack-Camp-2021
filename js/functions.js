@@ -1,17 +1,13 @@
-// alert("Connected Girlfriend!");
-
-////////////////////////////////////////
 /// 'Null' and 'Undefined':
 
 /// Null = Intentional abscense of any value
 ///      = Must be assigned
 
-//// Undefined = Variables that do not have 
+/// Undefined = Variables that do not have 
 ///      a defined value are undefined
 
 
-////////////////////////////////////////
-//// Comparison Operators: 
+/// Comparison Operators: 
 //  > greater than, < less than, 
 //  >= greater than or equal to
 //  <= less than or equal to
@@ -19,11 +15,10 @@
 //  === strict equal, !== strict non-equal
 
 //  ===, !== *Always use Tripe equal* 
+/////////////////////////////////////////////////
 
-////////////////////////////////////////
-//// 'if', 'else if' 'else' statements:
 
-/// 'if'
+/// 'if' statement:
 let rating = 5;
 
 if (rating === 5) {
@@ -31,7 +26,7 @@ if (rating === 5) {
 }
 
 
-//// 'else if'
+/// 'else if' statement:
 let stars = 4;
 
 if (stars === 4) {
@@ -49,7 +44,7 @@ if (dayOfWeek === "Monday") {
 }
 
 
-//// 'else'
+/// 'else'
 let rate = -99;
 
 if (rate === 3) {
@@ -72,8 +67,7 @@ if (random < 0.5) {
 console.log(random);
 
 
-////////////////////////////////////////
-//// Nesting Conditionals
+/// Nesting Conditionals
 const password = prompt("Please enter your password.");
 
 // Password must be 6+ characters
@@ -88,8 +82,8 @@ if (password.length >= 6) {
     console.log("Password Too Short! Must be 6+ characters.")
 }
 
-///////////////////////////////////////
-//// Truthy or Falsy
+
+/// Truthy or Falsy
 const userInput = prompt("Enter Something");
 
 if (userInput) {
@@ -99,8 +93,7 @@ if (userInput) {
 }
 
 
-////////////////////////////////////////
-//// Logical Operators:
+/// Logical Operators:
 ///  &&  and
 ///  ||  or
 const age = 77;
@@ -119,7 +112,6 @@ if (age < 5 || age >= 65) {
 ///  !true    // false
 
 
-///////////////////////////////////////
 /// Function Object Literals:
 /// key: value pairs
 const fitBitData = {
@@ -149,8 +141,8 @@ fitBitData.heartRate = 87;
 
 /// Nesting Arrays & Objects:
 const chickens = {
-    firstName: 'Ava',
-    lastName: 'Addams',
+    firstName: 'Andy',
+    lastName: 'Watkins',
     assets: ['T', 'A'],
     exams: {
         midterm: 92,
@@ -159,7 +151,6 @@ const chickens = {
 };
 
 
-//////////////////////////////////////
 /// Simple first function:
 /// Defining function 'singSong'
 function singSong() {
@@ -169,16 +160,15 @@ function singSong() {
 singSong();
 
 
-////////////////////////////////////////
 /// Arguements:
 /// 'person' is a parameter/ 
-/// 'Ava' is the arguement
+/// 'Andy' is the arguement
 //// String `template literal`
 function greet(person) {
     console.log(`Hi, ${person}!`);
 }
 
-greet('Ava'); /// "Hi, Ava!"
+greet('Andy'); /// "Hi, Andy"
 greet('Mandy'); /// "Hi, Mandy!"
 
 /// Multiple arguements:
@@ -186,7 +176,7 @@ function fullName(firstName, lastName) {
     console.log(`Hi, my name is ${firstName} ${lastName}.`);
 }
 
-fullName('Ava', 'Adams');
+fullName('Andy', 'Albrecht');
 fullName('Lonely', 'Island');
 
 
@@ -203,8 +193,7 @@ function repeat(str, numTimes) {
 repeat('Sup dude, ', 7);
 
 
-///////////////////////////////////////
-/// function Statement
+/// function Statement:
 /// the 'return' keyword:
 function add(x, y){
     return x + y;
@@ -213,7 +202,6 @@ function add(x, y){
 add(3,4); /// 7
 
 
-///////////////////////////////////////
 /// Function Scope:
 let totalEggs = 0;
 function collectEggs() {
@@ -272,7 +260,6 @@ function outer() {
 }
 
 
-///////////////////////////////////////
 /// function Expression:
 /// In these we are defining a function to
 /// a variable.
@@ -289,7 +276,6 @@ const square = function (num) {
 square(7); // 49
 
 
-///////////////////////////////////////
 /// Higher Order functions
 /// *Accept other functions as Arguements
 /// Return a function
@@ -308,7 +294,6 @@ function rollDie() {
 callTwice(rollDie);
 
 
-////////////////////////////////////////
 /// function as a Return value
 function makeMysteryFunc() {
     const rand = Math.random();
@@ -321,10 +306,7 @@ function makeMysteryFunc() {
         return function () {
             alert("YOU HAVE BEEN INFECTED WITH COVID-19");
             alert("Your Computer will Self-Disruct in 30 Seconds.");
-            alert("Your Computer will Self-Disruct in 30 Seconds.");
-            alert("Your Computer will Self-Disruct in 30 Seconds.");
-            alert("Your Computer will Self-Disruct in 30 Seconds.");
-            alert("Your Computer will Self-Disruct in 30 Seconds.");
+            
         }
     }
 }
@@ -333,7 +315,6 @@ const mystery = makeMysteryFunc();
 mystery();
 
 
-////////////////////////////////////////
 /// defining Methods:
 /// Add functions as properties in object.
 const myMath = {
@@ -354,7 +335,6 @@ const myMath = {
 /// function is a method*
 
 
-////////////////////////////////////////
 /// keyword 'this'
 /// Use the keyword 'this' to access properties
 /// on the same object.
@@ -384,7 +364,6 @@ identity.fullName(); // Andy Milano
 /// actually call the function*
 
 
-////////////////////////////////////////
 /// Try/Catch:
 try {
     hello.toUppercase();
